@@ -410,7 +410,7 @@ class Main:
         if not os.path.isdir(_temp):xbmcvfs.mkdir(_temp)
         unpacked = 'ldivx-' + str(uuid.uuid4()).replace("-","")[0:6]
         xbmcvfs.mkdirs(pjoin(_temp,unpacked,''))
-        _newtemp = os.path.join(_temp, xbmc.translatePath(unpacked).replace('\\','/'))
+        _newtemp = os.path.join(_temp, xbmcvfs.translatePath(unpacked).replace('\\','/'))
 
         url = main_url + 'login'
         download = main_url + 'legendas/download/' + id
